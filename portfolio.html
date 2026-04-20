@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html class="dark" lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#ffeee5",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed-dim": "#9ecaff",
+                        "secondary-fixed-dim": "#59dacd",
+                        "outline": "#8a919c",
+                        "background": "#131313",
+                        "on-secondary": "#003733",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb784",
+                        "on-secondary-container": "#003531",
+                        "surface-bright": "#3a3939",
+                        "on-primary-fixed-variant": "#00497c",
+                        "on-tertiary-fixed": "#301400",
+                        "tertiary": "#ffb784",
+                        "tertiary-container": "#ab5702",
+                        "surface-dim": "#131313",
+                        "error": "#ffb4ab",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary": "#9ecaff",
+                        "blocks-tertiary-fixed": "#ffdcc6",
+                        "primary-container": "#0071bc",
+                        "surface-tint": "#9ecaff",
+                        "surface-variant": "#353534",
+                        "outline-variant": "#404751",
+                        "on-primary-fixed": "#001d36",
+                        "on-tertiary-fixed-variant": "#713700",
+                        "secondary-container": "#00a89c",
+                        "surface-container": "#201f1f",
+                        "surface-container-highest": "#353534",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-fixed": "#00201d",
+                        "on-error": "#690005",
+                        "surface-container-low": "#1c1b1b",
+                        "on-surface-variant": "#c0c7d3",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#0061a3",
+                        "on-primary": "#003258",
+                        "secondary-fixed": "#78f7e9",
+                        "surface": "#131313",
+                        "secondary": "#59dacd",
+                        "on-tertiary": "#4f2500",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed": "#d1e4ff",
+                        "on-secondary-fixed-variant": "#00504a",
+                        "on-primary-container": "#eaf1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+
+</head>
+
+<body class="bg-background text-on-background font-body antialiased">
+    <!-- Menu de Navegación -->
+    <nav id="main-nav" class="fixed top-0 w-full z-50 bg-[#131313]/70 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-8 h-20 flex justify-between items-center">
+            <div class="flex-shrink-0">
+                <a href="index.html" class="block hover:opacity-80 transition-opacity duration-300">
+                    <img src="assets/logo/LOGO_White.png" alt="FRONTDEV.ES Logo" class="h-12 w-auto object-contain">
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-slate-400 font-medium uppercase tracking-[0.1em] text-[11px] hover:text-teal-400 transition-all duration-300"
+                    href="index.html">Inicio</a>
+                <a class="text-slate-400 font-medium uppercase tracking-[0.1em] text-[11px] hover:text-teal-400 transition-all duration-300"
+                    href="portfolio.html#sobre">Sobre mí</a>
+                <a class="text-slate-400 font-medium uppercase tracking-[0.1em] text-[11px] hover:text-teal-400 transition-all duration-300"
+                    href="servicios.html">Servicios</a>
+                <a class="text-slate-400 font-medium uppercase tracking-[0.1em] text-[11px] hover:text-teal-400 transition-all duration-300"
+                    href="portfolio.html">Portfolio</a>
+                <a class="text-slate-400 font-medium uppercase tracking-[0.1em] text-[11px] hover:text-teal-400 transition-all duration-300"
+                    href="#contato">Contacto</a>
+                <a href="portfolio.html"
+                    class="bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed px-6 py-2.5 rounded-xl text-sm font-bold tracking-tight hover:scale-95 transition-transform">
+                    Ver Proyectos
+                </a>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-slate-200 focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="md:hidden absolute top-20 left-0 w-full min-h-screen bg-[#131313] backdrop-blur-xl border-b border-white/10 px-8 py-8 flex flex-col gap-4 z-40">
+            <a class="text-slate-400 font-medium uppercase tracking-[0.2em] text-xs py-4 px-4 rounded-lg hover:bg-white/5 hover:text-teal-400 transition-all duration-300 flex justify-between items-center group"
+                href="index.html">
+                Inicio
+                <span
+                    class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">arrow_forward</span>
+            </a>
+            <a class="text-slate-400 font-medium uppercase tracking-[0.2em] text-xs py-4 px-4 rounded-lg hover:bg-white/5 hover:text-teal-400 transition-all duration-300 flex justify-between items-center group"
+                href="portfolio.html#sobre">
+                Sobre mí
+                <span
+                    class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">arrow_forward</span>
+            </a>
+            <a class="text-slate-400 font-medium uppercase tracking-[0.2em] text-xs py-4 px-4 rounded-lg hover:bg-white/5 hover:text-teal-400 transition-all duration-300 flex justify-between items-center group"
+                href="servicios.html">
+                Servicios
+                <span
+                    class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">arrow_forward</span>
+            </a>
+            <a class="text-slate-400 font-medium uppercase tracking-[0.2em] text-xs py-4 px-4 rounded-lg hover:bg-white/5 hover:text-teal-400 transition-all duration-300 flex justify-between items-center group"
+                href="portfolio.html">
+                Portfolio
+                <span
+                    class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">arrow_forward</span>
+            </a>
+            <a class="text-slate-400 font-medium uppercase tracking-[0.2em] text-xs py-4 px-4 rounded-lg hover:bg-white/5 hover:text-teal-400 transition-all duration-300 flex justify-between items-center group"
+                href="#contato">
+                Contacto
+                <span
+                    class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">arrow_forward</span>
+            </a>
+
+            <div class="mt-4 pt-6 border-t border-white/5">
+                <a href="#portfolio"
+                    class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed px-6 py-4 rounded-xl text-sm font-bold tracking-widest uppercase hover:shadow-[0_0_20px_rgba(158,202,255,0.3)] transition-all">
+                    Ver Proyectos
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!-- Hero -->
+        <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden hero-gradient"
+            id="hero">
+            <div class="absolute inset-0 opacity-20 pointer-events-none">
+                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-container rounded-full blur-[120px]"></div>
+                <div
+                    class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary-container rounded-full blur-[150px]">
+                </div>
+            </div>
+            <div class="container mx-auto px-8 relative z-10">
+                <div class="max-w-4xl">
+                    <span
+                        class="inline-block text-secondary font-label tracking-[0.2em] text-[10px] uppercase mb-6 bg-secondary/10 px-3 py-1 rounded-full border border-secondary/20">
+                        Design de vanguardia
+                    </span>
+                    <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] text-on-background mb-8">
+                        Creatividad y Estrategia en cada píxel.
+                    </h1>
+                    <p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-12 font-light leading-relaxed">
+                        Transformando ideas en experiencias digitales de alto impacto con una estética refinada y
+                        rendimiento técnico.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a href="#portfolio"
+                            class="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed px-10 py-5 rounded-xl font-bold text-lg hover:shadow-[0_0_30px_rgba(0,113,188,0.4)] transition-all">
+                            Ver Proyectos
+                        </a>
+                        <a href="#contato"
+                            class="border border-secondary/30 text-secondary px-10 py-5 rounded-xl font-bold text-lg hover:bg-secondary/5 transition-all flex items-center gap-2">
+                            <span>Hablemos</span>
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sobre mí -->
+        <section class="py-32 bg-surface" id="sobre">
+            <div class="container mx-auto px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div class="relative aspect-square">
+                        <div
+                            class="absolute inset-0 bg-surface-container rounded-3xl rotate-3 border border-outline-variant/10">
+                        </div>
+                        <img alt="Profesional Creativo"
+                            class="absolute inset-0 w-full h-full p-[15px] object-cover rounded-3xl -rotate-3 transition-transform hover:rotate-0 duration-700"
+                            src="/assets/EdmilsonPonceInsta.jpg" />
+                    </div>
+                    <div>
+                        <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-10">Sobre Mí</h2>
+                        <div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
+                            <p>
+                                <span class="text-secondary-container font-bold">Diseño y desarrollo Landing Pages de
+                                    alto impacto</span>,
+                                combinando la agilidad de WordPress y Elementor con la precisión del
+                                código puro (HTML, CSS y JavaScript). Mi enfoque es flexible: puedo potenciar tu
+                                WordPress
+                                con funciones a medida o construir tu web íntegramente desde cero mediante código,
+                                garantizando siempre una exclusividad total y una velocidad de carga imbatible.
+                            </p>
+                            <p>
+                                A diferencia de un diseñador convencional, entiendo tu web como una
+                                pieza clave de ingeniería comercial. Integro mi experiencia en <span
+                                    class="text-secondary font-bold">Tráfico Pagado (Google, Meta y Native Ads)</span>
+                                para asegurar que cada visita tenga un propósito: convertir. Mi misión es elevar el
+                                estándar de tu presencia digital con un diseño de élite y una estrategia de captación
+                                ganadora.
+                            </p>
+                            <div class="pt-8 flex gap-12">
+                                <!-- <div>
+                                    <p class="text-4xl font-black text-on-background">08+</p>
+                                    <p class="text-xs uppercase tracking-widest text-outline">Años de Exp.</p>
+                                </div>
+                                <div>
+                                    <p class="text-4xl font-black text-on-background">150+</p>
+                                    <p class="text-xs uppercase tracking-widest text-outline">Proyectos</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio -->
+        <section class="py-32 bg-surface-container-lowest" id="portfolio">
+            <div class="container mx-auto px-8">
+                <div class="flex flex-col md:flex-row justify-center items-center mb-20 gap-10">
+                    <div>
+                        <span class="text-primary font-label tracking-widest text-xs uppercase block mb-4">Galería
+                            Seleccionada</span>
+                        <h2 class="text-4xl md:text-6xl font-black tracking-tighter">Proyectos Destacados</h2>
+                    </div>
+                    <p class="text-on-surface-variant max-w-sm border-l border-primary-container pl-6 py-2">
+                        Selección de sitios web desarrollados con enfoque en conversión, estética moderna y código
+                        limpio.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
+                    <!--Card 1-->
+                    <div
+                        class="group bg-surface-container rounded-3xl p-5 transition-all hover:bg-surface-container-high border border-transparent hover:border-secondary/30">
+                        <div
+                            class="aspect-video rounded-2xl overflow-hidden mb-6 bg-surface-container-highest relative">
+                            <span
+                                class="absolute top-4 left-4 z-10 bg-primary/20 backdrop-blur-md text-primary text-[10px] font-bold px-3 py-1 rounded-full border border-primary/30 uppercase tracking-tighter">
+                                Cliente
+                            </span>
+                            <img alt="Proyecto Web WordPress"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                src="./assets/tuteutau.com.jpg" />
+                        </div>
+
+                        <div class="px-2">
+                            <div class="flex flex-col mb-4">
+                                <h3 class="text-2xl font-bold tracking-tight mb-1">TU·TEU·TAO Web Site</h3>
+                                <p class="text-on-surface-variant text-xs uppercase tracking-widest font-medium">Web
+                                    Design & WordPress</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="text-[9px] bg-white/5 text-slate-400 px-2 py-1 rounded border border-white/10 font-bold">WORDPRESS</span>
+                                    <span
+                                        class="text-[9px] bg-white/5 text-slate-400 px-2 py-1 rounded border border-white/10 font-bold">ELEMENTOR</span>
+                                </div>
+
+                                <a href="https://tuteutao.com/" target="_blank"
+                                    class="flex items-center gap-2 bg-secondary text-on-secondary px-5 py-2.5 rounded-xl text-xs font-bold hover:scale-95 transition-transform shadow-lg shadow-secondary/10">
+                                    VISITAR SITE
+                                    <span class="material-symbols-outlined text-sm">open_in_new</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Card 2-->
+                    <div
+                        class="group bg-surface-container rounded-3xl p-5 transition-all hover:bg-surface-container-high border border-transparent hover:border-secondary/30">
+                        <div
+                            class="aspect-video rounded-2xl overflow-hidden mb-6 bg-surface-container-highest relative">
+                            <span
+                                class="absolute top-4 left-4 z-10 bg-secondary/20 backdrop-blur-md text-secondary text-[10px] font-bold px-3 py-1 rounded-full border border-secondary/30 uppercase tracking-tighter">
+                                Cliente
+                            </span>
+                            <img alt="Proyecto WordPress"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                src="./assets/sannatur_es.jpg" />
+                        </div>
+                        <div class="px-2">
+                            <div class="flex flex-col mb-4">
+                                <h3 class="text-2xl font-bold tracking-tight mb-1">Sannatur Web Site</h3>
+                                <p class="text-on-surface-variant text-xs uppercase tracking-widest font-medium">
+                                    Web Design & WordPress</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="text-[9px] bg-white/5 text-slate-400 px-2 py-1 rounded border border-white/10 font-bold">WORDPRESS</span>
+                                    <span
+                                        class="text-[9px] bg-white/5 text-slate-400 px-2 py-1 rounded border border-white/10 font-bold">ELEMENTOR</span>
+                                </div>
+
+                                <a href="https://sannatur.es" target="_blank"
+                                    class="flex items-center gap-2 bg-secondary text-on-secondary px-5 py-2.5 rounded-xl text-xs font-bold hover:scale-95 transition-transform shadow-lg shadow-secondary/10">
+                                    VISITAR SITE
+                                    <span class="material-symbols-outlined text-sm">open_in_new</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Card 3-->
+                    <div
+                        class="group bg-surface-container rounded-3xl p-5 transition-all hover:bg-surface-container-high border border-transparent hover:border-secondary/30">
+                        <div
+                            class="aspect-video rounded-2xl overflow-hidden mb-6 bg-surface-container-highest relative">
+                            <span
+                                class="absolute top-4 left-4 z-10 bg-primary/20 backdrop-blur-md text-primary text-[10px] font-bold px-3 py-1 rounded-full border border-primary/30 uppercase tracking-tighter">
+                                Cliente
+                            </span>
+                            <img alt="Proyecto Web WordPress"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                src="/assets/AlmasGemelas-ag.jpg" />
+                        </div>
+
+                        <div class="px-2">
+                            <div class="flex flex-col mb-4">
+                                <h3 class="text-2xl font-bold tracking-tight mb-1">Almas Gemelas Web Site</h3>
+                                <p class="text-on-surface-variant text-xs uppercase tracking-widest font-medium">Web
+                                    Design & WordPress</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="text-[9px] bg-white/5 text-slate-400 px-2 py-1 rounded border border-white/10 font-bold">WORDPRESS</span>
+                                    <span
+                                        class="text-[9px] bg-white/5 text-slate-400 px-2 py-1 rounded border border-white/10 font-bold">ELEMENTOR</span>
+                                </div>
+
+                                <a href="https://almasgemelas-ag.com/" target="_blank"
+                                    class="flex items-center gap-2 bg-secondary text-on-secondary px-5 py-2.5 rounded-xl text-xs font-bold hover:scale-95 transition-transform shadow-lg shadow-secondary/10">
+                                    VISITAR SITE
+                                    <span class="material-symbols-outlined text-sm">open_in_new</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Card 4-->
+                    <div
+                        class="group bg-surface-container rounded-3xl p-5 transition-all hover:bg-surface-container-high border border-transparent hover:border-secondary/30">
+                        <div
+                            class="aspect-video rounded-2xl overflow-hidden mb-6 bg-surface-container-highest relative">
+                            <span
+                                class="absolute top-4 left-4 z-10 bg-secondary/20 backdrop-blur-md text-secondary text-[10px] font-bold px-3 py-1 rounded-full border border-primary/30 uppercase tracking-tighter">
+                                Estudio
+                            </span>
+                            <img alt="Proyecto Frontend Tailwind Vibecoding"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                src="/assets/EsteticaTemplate01.jpg" />
+                        </div>
+
+                        <div class="px-2">
+                            <div class="flex flex-col mb-4">
+                                <h3 class="text-2xl font-bold tracking-tight mb-1">Estetica Template Landing Page</h3>
+                                <p class="text-on-surface-variant text-xs uppercase tracking-widest font-medium">Html
+                                    Tailwind JavaScript Vibecoding</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-4">
+                                <div class="flex flex-wrap gap-1">
+                                    <span
+                                        class="text-[9px] bg-white/5 text-slate-400 px-2 py-1 rounded border border-white/10 font-bold">HTML/TAILWIND</span>
+                                    <span
+                                        class="text-[9px] bg-white/5 text-slate-400 px-2 py-1 rounded border border-white/10 font-bold">JAVASCRIPT</span>
+                                    <span
+                                        class="text-[9px] bg-white/5 text-slate-400 px-2 py-1 rounded border border-white/10 font-bold">VIBECODING</span>
+                                </div>
+
+                                <a href="https://esteticalandingpage.netlify.app/" target="_blank"
+                                    class="flex items-center gap-2 bg-secondary text-on-secondary px-5 py-2.5 rounded-xl text-xs font-bold hover:scale-95 transition-transform shadow-lg shadow-secondary/10">
+                                    VISITAR SITE
+                                    <span class="material-symbols-outlined text-sm">open_in_new</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Card 5-->
+                    <div
+                        class="group bg-surface-container rounded-3xl p-5 transition-all hover:bg-surface-container-high border border-transparent hover:border-secondary/30">
+                        <div
+                            class="aspect-video rounded-2xl overflow-hidden mb-6 bg-surface-container-highest relative">
+                            <span
+                                class="absolute top-4 left-4 z-10 bg-primary/20 backdrop-blur-md text-primary text-[10px] font-bold px-3 py-1 rounded-full border border-primary/30 uppercase tracking-tighter">
+                                Estudio
+                            </span>
+                            <img alt="Proyecto Web WordPress"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                src="/assets/ebDesignerTemplate01.jpg" />
+                        </div>
+
+                        <div class="px-2">
+                            <div class="flex flex-col mb-4">
+                                <h3 class="text-2xl font-bold tracking-tight mb-1">Web Designer Template</h3>
+                                <p class="text-on-surface-variant text-xs uppercase tracking-widest font-medium">Html
+                                    Tailwind JavaScript Vibecoding</p>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-4">
+                                <div class="flex flex-wrap gap-1">
+                                    <span
+                                        class="text-[9px] bg-white/5 text-slate-400 px-2 py-1 rounded border border-white/10 font-bold">HTML/TAILWIND</span>
+                                    <span
+                                        class="text-[9px] bg-white/5 text-slate-400 px-2 py-1 rounded border border-white/10 font-bold">JAVASCRIPT</span>
+                                    <span
+                                        class="text-[9px] bg-white/5 text-slate-400 px-2 py-1 rounded border border-white/10 font-bold">VIBECODING</span>
+                                </div>
+
+                                <a href="https://webdesigner3d.netlify.app/" target="_blank"
+                                    class="flex items-center gap-2 bg-secondary text-on-secondary px-5 py-2.5 rounded-xl text-xs font-bold hover:scale-95 transition-transform shadow-lg shadow-secondary/10">
+                                    VISITAR SITE
+                                    <span class="material-symbols-outlined text-sm">open_in_new</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Contacto -->
+        <section class="py-32 bg-surface" id="contato">
+            <div class="container mx-auto px-8 ">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                    <div>
+                        <h2 class="text-4xl md:text-7xl font-black tracking-tighter mb-8">¿Hablamos?</h2>
+                        <p class="text-xl text-on-surface-variant mb-12 max-w-md">
+                            ¿Tienes un proyecto en mente? Ponte en contacto y hagamos realidad tu visión.
+                        </p>
+                        <div class="space-y-6">
+                            <a href="mailto:contacto@edmilsonponce.com"
+                                class="flex items-center gap-4 group cursor-pointer w-fit">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary transition-colors">
+                                    <span
+                                        class="material-symbols-outlined text-primary group-hover:text-on-primary">mail</span>
+                                </div>
+                                <span
+                                    class="text-lg font-medium hover:text-primary transition-colors">contacto@edmilsonponce.com</span>
+                            </a>
+
+                            <div class="flex flex-wrap gap-6 pt-4">
+                                <a href="https://www.linkedin.com/in/edmilson-ponce/?locale=es" target="_blank"
+                                    class="flex items-center gap-2 group">
+                                    <div
+                                        class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center group-hover:bg-[#0077b5] transition-all duration-300">
+                                        <svg class="w-5 h-5 fill-slate-400 group-hover:fill-white transition-colors"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="text-xs uppercase tracking-widest font-bold text-slate-500 group-hover:text-white transition-colors">LinkedIn</span>
+                                </a>
+
+                                <a href="https://www.instagram.com/edmilson_ponce/" target="_blank"
+                                    class="flex items-center gap-2 group">
+                                    <div
+                                        class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center group-hover:bg-gradient-to-tr group-hover:from-[#f9ce34] group-hover:via-[#ee2a7b] group-hover:to-[#6228d7] transition-all duration-300">
+                                        <svg class="w-5 h-5 fill-slate-400 group-hover:fill-white transition-colors"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="text-xs uppercase tracking-widest font-bold text-slate-500 group-hover:text-white transition-colors">Instagram</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-surface-container rounded-3xl p-10 border border-outline-variant/10 obsidian-glow">
+                        <form id="whatsapp-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label
+                                        class="text-xs uppercase tracking-widest text-outline font-bold">Nombre</label>
+                                    <input id="form-name" required
+                                        class="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-all text-on-background placeholder:text-outline/50"
+                                        placeholder="Tu nombre" type="text" />
+                                </div>
+                                <div class="space-y-2">
+                                    <label
+                                        class="text-xs uppercase tracking-widest text-outline font-bold">Teléfono</label>
+                                    <input id="form-client-phone" required
+                                        class="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-all text-on-background placeholder:text-outline/50"
+                                        placeholder="+34 000 000 000" type="tel" />
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase tracking-widest text-outline font-bold">E-mail
+                                    (Opcional)</label>
+                                <input id="form-email"
+                                    class="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-all text-on-background placeholder:text-outline/50"
+                                    placeholder="tu@email.com" type="email" />
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase tracking-widest text-outline font-bold">Mensaje</label>
+                                <textarea id="form-message" required
+                                    class="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-all text-on-background placeholder:text-outline/50 resize-none"
+                                    placeholder="Cuéntame sobre tu proyecto..." rows="4"></textarea>
+                            </div>
+
+                            <button
+                                class="w-full py-5 rounded-xl font-bold text-lg bg-[#25D366] hover:bg-[#128C7E] text-white transition-all transform active:scale-95 flex justify-center items-center gap-2"
+                                type="submit">
+                                <span>Enviar a WhatsApp</span>
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.886.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.98zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--footer-->
+    <footer class="relative z-10 bg-[#0E0E0E] w-full py-16 px-8 border-t border-slate-800/20 mt-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <div class="flex-shrink-0">
+                    <a href="#hero" class="block cursor-pointer">
+                        <img src="assets/logo/LOGO_White.png" alt="FRONTDEV.ES Logo"
+                            class="h-7 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                    </a>
+                </div>
+
+                <div class="flex gap-8">
+                    <a class="text-slate-500 hover:text-teal-400 transition-colors duration-300 font-medium text-[10px] tracking-[0.2em] uppercase"
+                        href="https://www.instagram.com/edmilson_ponce/" target="_blank">Instagram</a>
+                    <a class="text-slate-500 hover:text-teal-400 transition-colors duration-300 font-medium text-[10px] tracking-[0.2em] uppercase"
+                        href="https://www.linkedin.com/in/edmilson-ponce/?locale=es" target="_blank">LinkedIn</a>
+                    <a class="text-slate-500 hover:text-teal-400 transition-colors duration-300 font-medium text-[10px] tracking-[0.2em] uppercase"
+                        href="https://www.behance.net/edleon_designer" target="_blank">Behance</a>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-white/5 mb-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-slate-600 font-['Inter'] text-[10px] tracking-widest uppercase">
+                    © 2026 FRONTDEV.ES — HECHO CON <span class="text-teal-400/50">VIBECODING</span>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 relative z-20">
+                <a href="politica-privacidad.html"
+                    class="relative z-30 text-slate-600 hover:text-slate-400 transition-colors text-[10px] tracking-widest uppercase text-center">
+                    Política de Privacidad
+                </a>
+                <a href="terminos-servicio.html"
+                    class="relative z-30 text-slate-600 hover:text-slate-400 transition-colors text-[10px] tracking-widest uppercase text-center">
+                    Términos de Servicio
+                </a>
+                <a href="politica-cookies.html"
+                    class="relative z-30 text-slate-600 hover:text-slate-400 transition-colors text-[10px] tracking-widest uppercase text-center">
+                    Política de Cookies
+                </a>
+            </div>
+            </div>
+        </div>
+    </footer>
+    <!--Boton Cookiess-->
+    <button id="cookie-settings-btn"
+        class="fixed bottom-6 left-6 z-[60] w-12 h-12 bg-[#131313] border border-white/10 rounded-full flex items-center justify-center text-slate-400 hover:text-teal-400 hover:border-teal-400/50 transition-all shadow-2xl hidden">
+        <span class="material-symbols-outlined">cookie</span>
+    </button>
+    <!--Boton whatsapp-->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4 pointer-events-none">
+        <div id="wa-tooltip"
+            class="bg-[#131313]/90 backdrop-blur-md border border-white/10 px-4 py-2 rounded-2xl shadow-2xl transition-all duration-500 transform translate-y-2 opacity-0 pointer-events-auto">
+            <p class="text-[10px] uppercase tracking-[0.2em] font-bold text-teal-400 text-right">¿Hablamos de tu proyecto?</p>
+        </div>
+
+        <a href="https://api.whatsapp.com/send?phone=34666998702&text=Hola%20Edmilson!%20Me%20gustaría%20saber%20más%20sobre%20tus%20servicios%20de%20diseño%20web%20y%20trafico%20digital."
+            target="_blank"
+            class="group relative w-14 h-14 bg-[#131313] border border-white/10 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:border-teal-400/50 hover:scale-110 pointer-events-auto">
+
+            <span class="absolute inset-0 rounded-full bg-teal-400/20 animate-ping group-hover:hidden"></span>
+
+            <svg class="w-6 h-6 fill-slate-200 group-hover:fill-teal-400 transition-colors" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.886.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.98zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
+        </a>
+    </div>
+    <!--Cookie Banner-->
+    <div id="cookie-banner"
+        class="fixed bottom-6 left-6 right-6 md:left-auto md:max-w-md z-[70] transition-all duration-500 transform translate-y-20 opacity-0 pointer-events-none">
+        <div class="bg-[#131313]/95 backdrop-blur-xl border border-white/10 p-8 rounded-[2rem] shadow-2xl">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-teal-400">shield_lock</span>
+                <h4 class="text-white font-bold tracking-tight">Privacidad y Cookies</h4>
+            </div>
+
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                Utilizamos cookies para mejorar tu experiencia. Puedes configurar tus preferencias o aceptarlas todas.
+            </p>
+
+            <div class="space-y-3 mb-8">
+                <label
+                    class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 cursor-not-allowed">
+                    <span class="text-[11px] uppercase tracking-widest font-bold text-slate-300">Necesarias</span>
+                    <input type="checkbox" checked disabled class="accent-teal-500">
+                </label>
+
+                <label
+                    class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 cursor-pointer hover:border-white/10 transition-colors">
+                    <span class="text-[11px] uppercase tracking-widest font-bold text-slate-300">Análisis</span>
+                    <input type="checkbox" id="cookie-analytics" class="w-4 h-4 accent-teal-500">
+                </label>
+
+                <label
+                    class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 cursor-pointer hover:border-white/10 transition-colors">
+                    <span class="text-[11px] uppercase tracking-widest font-bold text-slate-300">Marketing</span>
+                    <input type="checkbox" id="cookie-marketing" class="w-4 h-4 accent-teal-500">
+                </label>
+            </div>
+
+            <div class="flex flex-col gap-3">
+                <button id="accept-all-cookies"
+                    class="w-full py-3.5 bg-white text-black rounded-xl text-xs font-black uppercase tracking-widest hover:bg-teal-400 transition-colors">
+                    Aceptar Todas
+                </button>
+                <button id="save-cookie-prefs"
+                    class="w-full py-3.5 bg-transparent border border-white/10 text-white rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-white/5 transition-colors">
+                    Guardar Preferencias
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

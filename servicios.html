@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="dark" lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Edmilson Ponce">
+    <meta name="theme-color" content="#131313">
+
+    <title>Edmilson Ponce | Diseño Web Estratégico y Publicidad Digital</title>
+    <meta name="description"
+        content="No solo diseño webs, creo activos de venta. Especialista en desarrollo web y publicidad online (Google & Meta Ads) enfocada en convertir visitas en clientes reales.">
+    <meta name="keywords"
+        content="Diseño Web, Desarrollador Web, Marketing Digital, Google Ads, Meta Ads, Conversión de Ventas">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://frontdev.es/">
+    <meta property="og:title" content="Edmilson Ponce | Diseño Web y Estrategia Digital">
+    <meta property="og:description"
+        content="Transformo tu presencia digital en una máquina de ventas. Sitios web de alto rendimiento y publicidad efectiva.">
+    <!-- <meta property="og:image" content="https://frontdev.es/assets/share-preview.png"> -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Edmilson Ponce | Diseño Web Estratégico">
+    <meta property="twitter:description"
+        content="Creador de activos de venta digitales. Especialista en Performance & Design.">
+    <!-- <meta property="twitter:image" content="https://frontdev.es/assets/share-preview.png"> -->
+
+    <link rel="icon" type="image/svg+xml" href="./assets/Logo.svg">
+    <title>Edmilson Ponce | Diseñador y Desarrollador Web - Publicidad Digital</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#ffeee5",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed-dim": "#9ecaff",
+                        "secondary-fixed-dim": "#59dacd",
+                        "outline": "#8a919c",
+                        "background": "#131313",
+                        "on-secondary": "#003733",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb784",
+                        "on-secondary-container": "#003531",
+                        "surface-bright": "#3a3939",
+                        "on-primary-fixed-variant": "#00497c",
+                        "on-tertiary-fixed": "#301400",
+                        "tertiary": "#ffb784",
+                        "tertiary-container": "#ab5702",
+                        "surface-dim": "#131313",
+                        "error": "#ffb4ab",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary": "#9ecaff",
+                        "blocks-tertiary-fixed": "#ffdcc6",
+                        "primary-container": "#0071bc",
+                        "surface-tint": "#9ecaff",
+                        "surface-variant": "#353534",
+                        "outline-variant": "#404751",
+                        "on-primary-fixed": "#001d36",
+                        "on-tertiary-fixed-variant": "#713700",
+                        "secondary-container": "#00a89c",
+                        "surface-container": "#201f1f",
+                        "surface-container-highest": "#353534",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-fixed": "#00201d",
+                        "on-error": "#690005",
+                        "surface-container-low": "#1c1b1b",
+                        "on-surface-variant": "#c0c7d3",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#0061a3",
+                        "on-primary": "#003258",
+                        "secondary-fixed": "#78f7e9",
+                        "surface": "#131313",
+                        "secondary": "#59dacd",
+                        "on-tertiary": "#4f2500",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed": "#d1e4ff",
+                        "on-secondary-fixed-variant": "#00504a",
+                        "on-primary-container": "#eaf1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+
+</head>
+
+<body class="bg-background text-on-background font-body antialiased">
+    <!-- Menu de Navegación -->
+    <nav id="main-nav" class="fixed top-0 w-full z-50 bg-[#131313]/70 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-8 h-20 flex justify-between items-center">
+            <div class="flex-shrink-0">
+                <a href="index.html" class="block hover:opacity-80 transition-opacity duration-300">
+                    <img src="assets/logo/LOGO_White.png" alt="FRONTDEV.ES Logo" class="h-12 w-auto object-contain">
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-slate-400 font-medium uppercase tracking-[0.1em] text-[11px] hover:text-teal-400 transition-all duration-300"
+                    href="index.html">Inicio</a>
+                <a class="text-slate-400 font-medium uppercase tracking-[0.1em] text-[11px] hover:text-teal-400 transition-all duration-300"
+                    href="portfolio.html#sobre">Sobre mí</a>
+                <a class="text-slate-400 font-medium uppercase tracking-[0.1em] text-[11px] hover:text-teal-400 transition-all duration-300"
+                    href="servicios.html">Servicios</a>
+                <a class="text-slate-400 font-medium uppercase tracking-[0.1em] text-[11px] hover:text-teal-400 transition-all duration-300"
+                    href="portfolio.html">Portfolio</a>
+                <a class="text-slate-400 font-medium uppercase tracking-[0.1em] text-[11px] hover:text-teal-400 transition-all duration-300"
+                    href="#contato">Contacto</a>
+                <a href="portfolio.html"
+                    class="bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed px-6 py-2.5 rounded-xl text-sm font-bold tracking-tight hover:scale-95 transition-transform">
+                    Ver Proyectos
+                </a>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-slate-200 focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="md:hidden absolute top-20 left-0 w-full min-h-screen bg-[#131313] backdrop-blur-xl border-b border-white/10 px-8 py-8 flex flex-col gap-4 z-40">
+            <a class="text-slate-400 font-medium uppercase tracking-[0.2em] text-xs py-4 px-4 rounded-lg hover:bg-white/5 hover:text-teal-400 transition-all duration-300 flex justify-between items-center group"
+                href="index.html">
+                Inicio
+                <span
+                    class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">arrow_forward</span>
+            </a>
+            <a class="text-slate-400 font-medium uppercase tracking-[0.2em] text-xs py-4 px-4 rounded-lg hover:bg-white/5 hover:text-teal-400 transition-all duration-300 flex justify-between items-center group"
+                href="portfolio.html#sobre">
+                Sobre mí
+                <span
+                    class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">arrow_forward</span>
+            </a>
+            <a class="text-slate-400 font-medium uppercase tracking-[0.2em] text-xs py-4 px-4 rounded-lg hover:bg-white/5 hover:text-teal-400 transition-all duration-300 flex justify-between items-center group"
+                href="servicios.html">
+                Servicios
+                <span
+                    class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">arrow_forward</span>
+            </a>
+            <a class="text-slate-400 font-medium uppercase tracking-[0.2em] text-xs py-4 px-4 rounded-lg hover:bg-white/5 hover:text-teal-400 transition-all duration-300 flex justify-between items-center group"
+                href="portfolio.html">
+                Portfolio
+                <span
+                    class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">arrow_forward</span>
+            </a>
+            <a class="text-slate-400 font-medium uppercase tracking-[0.2em] text-xs py-4 px-4 rounded-lg hover:bg-white/5 hover:text-teal-400 transition-all duration-300 flex justify-between items-center group"
+                href="#contato">
+                Contacto
+                <span
+                    class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">arrow_forward</span>
+            </a>
+
+            <div class="mt-4 pt-6 border-t border-white/5">
+                <a href="#portfolio"
+                    class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed px-6 py-4 rounded-xl text-sm font-bold tracking-widest uppercase hover:shadow-[0_0_20px_rgba(158,202,255,0.3)] transition-all">
+                    Ver Proyectos
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!--footer-->
+    <footer class="relative z-10 bg-[#0E0E0E] w-full py-16 px-8 border-t border-slate-800/20 mt-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <div class="flex-shrink-0">
+                    <a href="#hero" class="block cursor-pointer">
+                        <img src="assets/logo/LOGO_White.png" alt="FRONTDEV.ES Logo"
+                            class="h-7 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                    </a>
+                </div>
+
+                <div class="flex gap-8">
+                    <a class="text-slate-500 hover:text-teal-400 transition-colors duration-300 font-medium text-[10px] tracking-[0.2em] uppercase"
+                        href="https://www.instagram.com/edmilson_ponce/" target="_blank">Instagram</a>
+                    <a class="text-slate-500 hover:text-teal-400 transition-colors duration-300 font-medium text-[10px] tracking-[0.2em] uppercase"
+                        href="https://www.linkedin.com/in/edmilson-ponce/?locale=es" target="_blank">LinkedIn</a>
+                    <a class="text-slate-500 hover:text-teal-400 transition-colors duration-300 font-medium text-[10px] tracking-[0.2em] uppercase"
+                        href="https://www.behance.net/edleon_designer" target="_blank">Behance</a>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-white/5 mb-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-slate-600 font-['Inter'] text-[10px] tracking-widest uppercase">
+                    © 2026 FRONTDEV.ES — HECHO CON <span class="text-teal-400/50">VIBECODING</span>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 relative z-20">
+                    <a href="politica-privacidad.html"
+                        class="relative z-30 text-slate-600 hover:text-slate-400 transition-colors text-[10px] tracking-widest uppercase text-center">
+                        Política de Privacidad
+                    </a>
+                    <a href="terminos-servicio.html"
+                        class="relative z-30 text-slate-600 hover:text-slate-400 transition-colors text-[10px] tracking-widest uppercase text-center">
+                        Términos de Servicio
+                    </a>
+                    <a href="politica-cookies.html"
+                        class="relative z-30 text-slate-600 hover:text-slate-400 transition-colors text-[10px] tracking-widest uppercase text-center">
+                        Política de Cookies
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Boton Cookiess-->
+    <button id="cookie-settings-btn"
+        class="fixed bottom-6 left-6 z-[600] w-12 h-12 bg-[#131313] border border-white/10 rounded-full flex items-center justify-center text-slate-400 hover:text-teal-400 hover:border-teal-400/50 transition-all shadow-2xl hidden">
+        <span class="material-symbols-outlined">cookie</span>
+    </button>
+    <!--Boton whatsapp-->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4 pointer-events-none">
+        <div id="wa-tooltip"
+            class="bg-[#131313]/90 backdrop-blur-md border border-white/10 px-4 py-2 rounded-2xl shadow-2xl transition-all duration-500 transform translate-y-2 opacity-0 pointer-events-auto">
+            <p class="text-[10px] uppercase tracking-[0.2em] font-bold text-teal-400 text-right">¿Hablamos de tu
+                proyecto?</p>
+        </div>
+
+        <a href="https://api.whatsapp.com/send?phone=34666998702&text=Hola%20Edmilson!%20Me%20gustaría%20saber%20más%20sobre%20tus%20servicios%20de%20diseño%20web%20y%20trafico%20digital."
+            target="_blank"
+            class="group relative w-14 h-14 bg-[#131313] border border-white/10 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:border-teal-400/50 hover:scale-110 pointer-events-auto">
+
+            <span class="absolute inset-0 rounded-full bg-teal-400/20 animate-ping group-hover:hidden"></span>
+
+            <svg class="w-6 h-6 fill-slate-200 group-hover:fill-teal-400 transition-colors" viewBox="0 0 24 24">
+                <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.886.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.98zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
+        </a>
+    </div>
+    <!--Cookie Banner-->
+    <div id="cookie-banner"
+        class="fixed bottom-6 left-6 right-6 md:left-auto md:max-w-md z-[70] transition-all duration-500 transform translate-y-20 opacity-0 pointer-events-none">
+        <div class="bg-[#131313]/95 backdrop-blur-xl border border-white/10 p-8 rounded-[2rem] shadow-2xl">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-teal-400">shield_lock</span>
+                <h4 class="text-white font-bold tracking-tight">Privacidad y Cookies</h4>
+            </div>
+
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                Utilizamos cookies para mejorar tu experiencia. Puedes configurar tus preferencias o aceptarlas todas.
+            </p>
+
+            <div class="space-y-3 mb-8">
+                <label
+                    class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 cursor-not-allowed">
+                    <span class="text-[11px] uppercase tracking-widest font-bold text-slate-300">Necesarias</span>
+                    <input type="checkbox" checked disabled class="accent-teal-500">
+                </label>
+
+                <label
+                    class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 cursor-pointer hover:border-white/10 transition-colors">
+                    <span class="text-[11px] uppercase tracking-widest font-bold text-slate-300">Análisis</span>
+                    <input type="checkbox" id="cookie-analytics" class="w-4 h-4 accent-teal-500">
+                </label>
+
+                <label
+                    class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 cursor-pointer hover:border-white/10 transition-colors">
+                    <span class="text-[11px] uppercase tracking-widest font-bold text-slate-300">Marketing</span>
+                    <input type="checkbox" id="cookie-marketing" class="w-4 h-4 accent-teal-500">
+                </label>
+            </div>
+
+            <div class="flex flex-col gap-3">
+                <button id="accept-all-cookies"
+                    class="w-full py-3.5 bg-white text-black rounded-xl text-xs font-black uppercase tracking-widest hover:bg-teal-400 transition-colors">
+                    Aceptar Todas
+                </button>
+                <button id="save-cookie-prefs"
+                    class="w-full py-3.5 bg-transparent border border-white/10 text-white rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-white/5 transition-colors">
+                    Guardar Preferencias
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

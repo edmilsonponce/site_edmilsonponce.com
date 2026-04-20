@@ -1,0 +1,39 @@
+.material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .obsidian-glow {
+            box-shadow: 0 0 20px -5px rgba(0, 113, 188, 0.2);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0A0A0A 60%, #0071BC 100%);
+        }
+
+/* Animación suave para el menú móvil */
+#mobile-menu {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: top;
+    opacity: 0;
+    transform: translateY(-10px) scaleY(0.95);
+    pointer-events: none; /* Evita clics cuando está oculto */
+}
+
+#mobile-menu.active {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+    pointer-events: auto;
+}
+/* MArquee */
+@keyframes marquee-infinite {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee-infinite {
+            animation: marquee-infinite 20s linear infinite;
+        }
+
+.animate-marquee-infinite:hover {
+    animation-play-state: paused;
+}
+

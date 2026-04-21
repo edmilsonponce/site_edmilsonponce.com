@@ -30,7 +30,7 @@
             100% { transform: translateX(-50%); }
         }
         .animate-marquee-infinite {
-            animation: marquee-infinite 20s linear infinite;
+            animation: marquee-infinite 15s linear infinite;
         }
 
 .animate-marquee-infinite:hover {

@@ -51,6 +51,13 @@ if (waForm) { // Solo se ejecuta si el formulario existe en la página
     });
 }
 
+const privacyCheck = document.getElementById('privacy-check');
+const whatsappBtn = document.getElementById('whatsapp-btn');
+
+privacyCheck.addEventListener('change', () => {
+    whatsappBtn.disabled = !privacyCheck.checked;
+});
+
 //whatsapp boton script
 window.addEventListener('load', () => {
     const tooltip = document.getElementById('wa-tooltip');
